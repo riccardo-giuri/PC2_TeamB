@@ -24,13 +24,11 @@ public class PauseMenu : MonoBehaviour
                 PauseMenuPanel.SetActive(true);
                 IsStopped = true;
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
-                Time.timeScale = 1;
-                PauseMenuPanel.SetActive(false);
-                IsStopped = false;
-                StartCoroutine(Locking());
+                ResumeGame();
             }
         }
     }
@@ -41,16 +39,11 @@ public class PauseMenu : MonoBehaviour
         PauseMenuPanel.SetActive(false);
         IsStopped = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     public void BackToMenu()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
-    }
-
-    IEnumerator Locking()
-    {
-        yield return new WaitForSeconds(0.4f);
-        Cursor.lockState = CursorLockMode.Locked;
     }
 }
