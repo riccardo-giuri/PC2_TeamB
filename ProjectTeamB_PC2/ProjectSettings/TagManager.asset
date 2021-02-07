@@ -7,6 +7,9 @@ TagManager:
   - SpawnPoint
   - Destroyer
   - FirstFloor
+  - Weapon
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
