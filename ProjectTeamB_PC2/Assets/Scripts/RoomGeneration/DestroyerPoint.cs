@@ -6,7 +6,7 @@ public class DestroyerPoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FirstFloor") == false)
+        if (other.CompareTag("FirstFloor") == false && other.CompareTag("Player") == false)
         {
             if (other.CompareTag("SpawnPoint"))
             {
