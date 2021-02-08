@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class PlayerController : MonoBehaviour
 	public float JumpSpeed = 100;
 	float VerticalSpeed = 0;
 	CharacterController cController;
+
+	//temporary variable
+	public Transform WeaponPointToSpawn;
+	public GameObject CurrentWeapon;
+	public Text UIPickup;
 
 	void Start()
 	{
