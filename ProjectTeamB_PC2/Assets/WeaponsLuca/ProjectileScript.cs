@@ -6,9 +6,12 @@ using UnityEngine.UI;
 public class ProjectileScript : MonoBehaviour
 {
     
+    
     private void Update()
     {
+        
         Destroy(gameObject, 3f);
+
     }
 
     private void OnTriggerEnter(Collider other)
