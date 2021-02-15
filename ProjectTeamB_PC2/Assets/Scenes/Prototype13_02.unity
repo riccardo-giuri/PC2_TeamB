@@ -1879,7 +1879,7 @@ MonoBehaviour:
   JumpSpeed: 7
   WeaponPointToSpawn: {fileID: 1255999575}
   CurrentWeapon: {fileID: 1928578250}
-  UIPickup: {fileID: 0}
+  UIPickup: {fileID: 2088844696}
 --- !u!143 &1034862486
 CharacterController:
   m_ObjectHideFlags: 0
