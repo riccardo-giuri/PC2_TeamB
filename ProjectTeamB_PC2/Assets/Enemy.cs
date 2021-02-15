@@ -70,15 +70,7 @@ public int bulletsPerTap;
 public bool allowButtonHold;
 public bool allowInvoke = true;
 
-
-
-
-
-
 public Transform attackPoint;
-
-
-
 
 
     //private script handled variables
@@ -93,7 +85,7 @@ CharacterController characterController; //CC used for enemy movement and etc.
 
 private bool playerHasBeenSeen = false; //An enhancement to how the AI functions prior to visibly seeing the target. Brings AI to life when target is close, but not visible.
 
-private bool enemyCanAttack = false; //Used to determine if the enemy is within range to attack, regardless of moving or not.
+private bool enemyCanAttack = true; //Used to determine if the enemy is within range to attack, regardless of moving or not.
 
 private bool enemyIsAttacking = false; //An attack interuption method.
 
@@ -175,9 +167,9 @@ IEnumerator Initialize()
 
 void Update()
 {
-        
+        target = GameObject.Find("Player").GetComponent<Transform>();
 
-    if (!on || !initialGo)
+        if (!on || !initialGo)
     {
 
         return;
@@ -360,14 +352,17 @@ void AIFunctionality()
 
             }
 
-            if (Time.time > lastShotFired + attackTime)
-            {
+           //if (Time.time > lastShotFired + attackTime)
+           //{
+           //    StartCoroutine(Attack());
+           //}
 
-                StartCoroutine(Attack());
+               // if (enemyCanAttack == true)
+               // {
+               //     StartCoroutine(Attack());
+               // }
 
             }
-
-        }
 
         
 
@@ -406,11 +401,8 @@ void AIFunctionality()
 //attack stuff...
 
 IEnumerator Attack()
-{
-        
-        enemyCanAttack = true;
-
-
+{      
+     enemyCanAttack = true;
 
     if (!enemyIsAttacking)
     {
@@ -445,16 +437,9 @@ IEnumerator Attack()
                 //implement attack variables here
 
                 yield return new WaitForSeconds(attackTime);
-
         }
-
     }
-
 }
-
-
-
-
 
 
 

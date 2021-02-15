@@ -112,7 +112,6 @@ public class Gun: MonoBehaviour
             //rinculo dell'arma
             //playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
         }
-
         
     }
     private void ResetShot()
@@ -121,13 +120,6 @@ public class Gun: MonoBehaviour
         allowInvoke = true;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Cambio"))
-        {
-            Destroy(gameObject);
-        }
-    }
 
 
 

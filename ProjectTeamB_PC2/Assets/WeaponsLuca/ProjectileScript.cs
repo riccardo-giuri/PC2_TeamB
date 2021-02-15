@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ProjectileScript : MonoBehaviour
 {
-    
-    
     private void Update()
     {
         
@@ -16,12 +14,17 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+       if (other.CompareTag("Enemy"))
+       {
+            Destroy(gameObject);
+       }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Player"))
         {
-            Transform EnemyPosition = other.gameObject.transform;
-            Destroy(other.gameObject);
-            WeaponDatabase weaponDatabase = FindObjectOfType<WeaponDatabase>();
-            Instantiate(weaponDatabase.Weapons[Random.Range(0, 2)], EnemyPosition.position, EnemyPosition.rotation);
+            Destroy(gameObject);
         }
     }
 

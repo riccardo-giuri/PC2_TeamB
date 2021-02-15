@@ -7,10 +7,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1898824697908444731, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3374394381283899272, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7705503751621912790, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705503751621912790, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705503751621912790, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705503751621912790, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7705503751621912790, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
         type: 3}
@@ -67,6 +92,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bullet Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7668502089333444307, guid: b5fd6f7b780c0be4aa0f22d8cb797424, type: 3}
+    - target: {fileID: 8885254115874149486, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyBullet
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5fd6f7b780c0be4aa0f22d8cb797424, type: 3}

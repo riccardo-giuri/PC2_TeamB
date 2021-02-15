@@ -558,12 +558,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b089098e031197f459ade35b7f2fbe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Proiettili: 100
+  Proiettili: 40
   bullet: {fileID: 8885254115874149486, guid: b5fd6f7b780c0be4aa0f22d8cb797424, type: 3}
   shootForce: 80
   upwardForce: 0
   timeBetweenShooting: 0.1
-  spread: 0
+  spread: 0.2
   bulletsPerTap: 1
   allowButtonHold: 1
   recoilForce: 0
