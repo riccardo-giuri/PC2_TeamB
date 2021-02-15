@@ -9,6 +9,12 @@ public class PlayerLife : MonoBehaviour
 
     public Text HPText, BulletText;
 
+    public GameObject mortePanel;
+
+    public void Awake()
+    {
+        Time.timeScale = 1;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,14 @@ public class PlayerLife : MonoBehaviour
         {
             lifeTimer -= Time.deltaTime;
             //HPText.text = lifeTimer.ToString("N1");
+        }
+
+        if(lifeTimer == 0)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+            mortePanel.SetActive(true);
         }
     }
 
