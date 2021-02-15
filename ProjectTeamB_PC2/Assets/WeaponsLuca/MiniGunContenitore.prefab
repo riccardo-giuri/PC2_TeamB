@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5324291871759690116}
   - component: {fileID: 5324291871759690115}
   - component: {fileID: 5324291871759690114}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 5324291871854239941}
   - component: {fileID: 5324291871854239940}
   - component: {fileID: 5324291871854239939}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 8925764803152611359}
   - component: {fileID: 683624438722612155}
   - component: {fileID: 6876627096495593483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MiniGunContenitore
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 5324291872246773715}
   - component: {fileID: 5324291872246773714}
   - component: {fileID: 5324291872246773713}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 5324291872356558880}
   - component: {fileID: 5324291872356558911}
   - component: {fileID: 5324291872356558910}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 5324291872401660327}
   - component: {fileID: 5324291872401660326}
   - component: {fileID: 5324291872401660325}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 5324291872584830371}
   - component: {fileID: 5324291872584830370}
   - component: {fileID: 5324291872584830369}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Canna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 5324291872802862280}
   - component: {fileID: 5324291872802862279}
   - component: {fileID: 5324291872802862278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5324291872990188014}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -812,7 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5324291873054321746}
   - component: {fileID: 5324291873054321750}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MiniGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 5324291873186234369}
   - component: {fileID: 5324291873186234368}
   - component: {fileID: 5324291873186234399}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 5324291873559345765}
   - component: {fileID: 5324291873559345764}
   - component: {fileID: 5324291873559345763}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 5324291873775455217}
   - component: {fileID: 5324291873775455216}
   - component: {fileID: 5324291873775455183}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1150,7 @@ GameObject:
   - component: {fileID: 5324291873787788684}
   - component: {fileID: 5324291873787788683}
   - component: {fileID: 5324291873787788682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1244,7 +1244,7 @@ GameObject:
   - component: {fileID: 5324291873847096621}
   - component: {fileID: 5324291873847096620}
   - component: {fileID: 5324291873847096619}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

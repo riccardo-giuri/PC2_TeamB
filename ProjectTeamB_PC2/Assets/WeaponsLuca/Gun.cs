@@ -58,8 +58,8 @@ public class Gun: MonoBehaviour
     private void MyInput()
     {
         //Check if allowed to hold down button and take corresponding input
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Joystick1Button7);
+        else shooting = Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Joystick1Button7);
      
         //Shooting
         if (readyToShoot && shooting && Myscript.BulletTimer > 0)
