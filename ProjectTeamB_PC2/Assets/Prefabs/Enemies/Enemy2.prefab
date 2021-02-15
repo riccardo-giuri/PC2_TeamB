@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2573e0c4e86b23439b962698faea371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 20
+  life: 15
   hitmarker: {fileID: 0}
 --- !u!114 &-2472739036045445656
 MonoBehaviour:
@@ -302,7 +302,7 @@ MonoBehaviour:
   enemyCanAttack: 1
   enemyIsAttacking: 1
   spread: 0
-  attackTime: 3
+  attackTime: 5
   shootForce: 70
   bullet: {fileID: 537620467035834091, guid: fad19f6dbbf062b469b5e78d17c93786, type: 3}
   attackPoint: {fileID: 2400659211219649452}
