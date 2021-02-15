@@ -38,7 +38,7 @@ public class PlayerLife : MonoBehaviour
             //HPText.text = lifeTimer.ToString("N1");
         }
 
-        if(lifeTimer == 0)
+        if(lifeTimer <= 0)
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
