@@ -5,17 +5,23 @@ using UnityEngine.UI;
 
 public class ProjectileScript : MonoBehaviour
 {
-    private void Update()
-    {
-        
-        Destroy(gameObject, 3f);
+    public bool hitOn = false;
 
+    private void Start()
+    {
+
+    }
+
+    private void Update()
+    {   
+        Destroy(gameObject, 3f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
        if (other.CompareTag("Enemy"))
        {
+            hitOn = true;
             Destroy(gameObject);
        }
     }
@@ -26,6 +32,12 @@ public class ProjectileScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator Hitten()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+        hitOn = false;
     }
 
 }

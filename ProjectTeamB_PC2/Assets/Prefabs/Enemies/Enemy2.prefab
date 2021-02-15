@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
+  hitmarker: {fileID: 0}
 --- !u!114 &-2472739036045445656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ MonoBehaviour:
   enemyCanAttack: 1
   enemyIsAttacking: 1
   spread: 0
-  attackTime: 2
+  attackTime: 3
   shootForce: 70
   bullet: {fileID: 537620467035834091, guid: fad19f6dbbf062b469b5e78d17c93786, type: 3}
   attackPoint: {fileID: 2400659211219649452}

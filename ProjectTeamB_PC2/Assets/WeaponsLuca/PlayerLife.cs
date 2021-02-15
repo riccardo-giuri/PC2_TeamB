@@ -12,7 +12,7 @@ public class PlayerLife : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        HPText.text = lifeTimer.ToString("N1");      
+        HPText.text = lifeTimer.ToString("N1");
     }
 
     // Update is called once per frame
@@ -31,9 +31,6 @@ public class PlayerLife : MonoBehaviour
             lifeTimer -= Time.deltaTime;
             //HPText.text = lifeTimer.ToString("N1");
         }
-
-        Debug.Log("BulletTimer" + Mathf.Round(BulletTimer));
-        Debug.Log("lifeTimer" + Mathf.Round(lifeTimer));
     }
 
     public void OnCollisionEnter(Collision collision)
