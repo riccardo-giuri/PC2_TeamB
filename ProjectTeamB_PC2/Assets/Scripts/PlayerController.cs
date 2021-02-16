@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 		if (!cController.isGrounded) VerticalSpeed = VerticalSpeed - gravity * Time.deltaTime;
 		else VerticalSpeed = -gravity;
 	
-		if (Input.GetKeyDown(KeyCode.Space)|| Input.GetKeyDown(KeyCode.Joystick1Button1) && cController.isGrounded)
+		if (Input.GetKeyDown(KeyCode.Space) /*|| Input.GetKeyDown(KeyCode.Joystick1Button1)*/ && cController.isGrounded)
 		{
 			VerticalSpeed = JumpSpeed;
 		}
