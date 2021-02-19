@@ -31,8 +31,8 @@ public class PlayerLife : MonoBehaviour
             HPText.text = lifeTimer.ToString("N1");
         }
 
-        Debug.Log("BulletTimer" + BulletTimer);
-        Debug.Log("lifeTimer" + lifeTimer);
+        //Debug.Log("BulletTimer" + BulletTimer);
+        //Debug.Log("lifeTimer" + lifeTimer);
     }
 
    
