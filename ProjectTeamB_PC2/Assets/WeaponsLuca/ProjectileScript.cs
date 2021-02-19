@@ -5,21 +5,39 @@ using UnityEngine.UI;
 
 public class ProjectileScript : MonoBehaviour
 {
-    
-    private void Update()
+    public bool hitOn = false;
+
+    private void Start()
     {
+
+    }
+
+    private void Update()
+    {   
         Destroy(gameObject, 3f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
+       if (other.CompareTag("Enemy"))
+       {
+            hitOn = true;
+            Destroy(gameObject);
+       }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Player"))
         {
-            Transform EnemyPosition = other.gameObject.transform;
-            Destroy(other.gameObject);
-            WeaponDatabase weaponDatabase = FindObjectOfType<WeaponDatabase>();
-            Instantiate(weaponDatabase.Weapons[Random.Range(0, 2)], EnemyPosition.position, EnemyPosition.rotation);
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator Hitten()
+    {
+        yield return new WaitForSecondsRealtime(0.1f);
+        hitOn = false;
     }
 
 }

@@ -58,8 +58,8 @@ public class Gun: MonoBehaviour
     private void MyInput()
     {
         //Check if allowed to hold down button and take corresponding input
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
-        else shooting = Input.GetKeyDown(KeyCode.Mouse0);
+        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Joystick1Button7);
+        else shooting = Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Joystick1Button7);
      
         //Shooting
         if (readyToShoot && shooting && Myscript.BulletTimer > 0)
@@ -112,7 +112,6 @@ public class Gun: MonoBehaviour
             //rinculo dell'arma
             //playerRb.AddForce(-directionWithSpread.normalized * recoilForce, ForceMode.Impulse);
         }
-
         
     }
     private void ResetShot()
@@ -121,13 +120,6 @@ public class Gun: MonoBehaviour
         allowInvoke = true;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Cambio"))
-        {
-            Destroy(gameObject);
-        }
-    }
 
 
 

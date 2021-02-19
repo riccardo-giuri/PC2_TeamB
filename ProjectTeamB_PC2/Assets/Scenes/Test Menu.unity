@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f1c88ea568c20e4b807c064f9db14fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene1: Prototype1
+  scene1: Prototype13_02
   scene2: LevelDesignTest
 --- !u!114 &20316545
 MonoBehaviour:

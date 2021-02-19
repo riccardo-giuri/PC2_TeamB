@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4276870838098047546}
   - component: {fileID: 4276870838098047548}
   - component: {fileID: 4276870838098047549}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4276870838545342611}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4276870838607726118}
   - component: {fileID: 4276870838607726115}
   - component: {fileID: 4276870838607726116}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4276870838864666816}
   - component: {fileID: 4276870838864666829}
   - component: {fileID: 4276870838864666830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 4276870839220606014}
   - component: {fileID: 4276870839220606011}
   - component: {fileID: 4276870839220606012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 4276870839503607317}
   - component: {fileID: 4276870839503607314}
   - component: {fileID: 4276870839503607315}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 4276870839850495111}
   - component: {fileID: 7834075871737456922}
   - component: {fileID: 7156684336364941662}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AssaltoContenitore
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -558,12 +558,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b089098e031197f459ade35b7f2fbe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Proiettili: 100
+  Proiettili: 40
   bullet: {fileID: 8885254115874149486, guid: b5fd6f7b780c0be4aa0f22d8cb797424, type: 3}
   shootForce: 80
   upwardForce: 0
   timeBetweenShooting: 0.1
-  spread: 0
+  spread: 0.2
   bulletsPerTap: 1
   allowButtonHold: 1
   recoilForce: 0
@@ -592,7 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4276870839951185940}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Assalto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

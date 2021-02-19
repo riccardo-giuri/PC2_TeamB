@@ -840,6 +840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WeaponToSpawn: {fileID: 5324291871894724648, guid: b97c9a809e66b4a4087e71f67af8bfd5,
     type: 3}
+  UipickupText: {fileID: 0}
 --- !u!54 &7768271690667371500
 Rigidbody:
   m_ObjectHideFlags: 0
