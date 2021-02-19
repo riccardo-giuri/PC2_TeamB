@@ -243,19 +243,19 @@ MonoBehaviour:
   canFly: 0
   floatHeight: 0
   runAway: 0
-  runTo: 1
+  runTo: 0
   runDistance: 20
   runBufferDistance: 20
-  walkSpeed: 10
-  runSpeed: 50
-  randomSpeed: 10
+  walkSpeed: 0
+  runSpeed: 0
+  randomSpeed: 0
   rotationSpeed: 20
   visualRadius: 100
   moveableRadius: 200
   attackRange: 100
   attackTime: 2
   useWaypoints: 0
-  reversePatrol: 1
+  reversePatrol: 0
   waypoints: []
   pauseAtWaypoints: 0
   pauseMin: 1
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2573e0c4e86b23439b962698faea371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 15
+  life: 2
   hitmarker: {fileID: 0}
 --- !u!114 &-2472739036045445656
 MonoBehaviour:
@@ -302,8 +302,8 @@ MonoBehaviour:
   enemyCanAttack: 1
   enemyIsAttacking: 1
   spread: 0
-  attackTime: 5
-  shootForce: 70
+  attackTime: 1
+  shootForce: 150
   bullet: {fileID: 537620467035834091, guid: fad19f6dbbf062b469b5e78d17c93786, type: 3}
   attackPoint: {fileID: 2400659211219649452}
 --- !u!1001 &2400659209865144737
