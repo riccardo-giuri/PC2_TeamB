@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 3620229263846431679}
   - component: {fileID: 8993238073033306217}
   - component: {fileID: 7406169933360587520}
+  - component: {fileID: 3648706157099459366}
   m_Layer: 2
   m_Name: AssaltoContenitore
   m_TagString: Weapon
@@ -265,6 +266,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39a05d1198f7af447b9c9fa2d1ceb076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerPerMelee: 0
+  timerRicaricaMelee: 0
+  animazione: Melee
+--- !u!114 &3648706157099459366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653439271170983546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484397b199c0616489393057584d7e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Proiettili: 40
+  DrainSpeed: 10
+  bullet: {fileID: 8885254115874149486, guid: b5fd6f7b780c0be4aa0f22d8cb797424, type: 3}
+  shootForce: 80
+  upwardForce: 0
+  timeBetweenShooting: 0.1
+  spread: 0.2
+  bulletsPerTap: 1
+  allowButtonHold: 1
+  recoilForce: 0
+  attackPoint: {fileID: 7653439272343620210}
+  muzzleFlash: {fileID: 0}
+  allowInvoke: 1
 --- !u!1 &7653439271394540791
 GameObject:
   m_ObjectHideFlags: 0

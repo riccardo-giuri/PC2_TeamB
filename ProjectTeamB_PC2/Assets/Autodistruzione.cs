@@ -6,10 +6,12 @@ public class Autodistruzione : MonoBehaviour
 {
     public float life;
     public GameObject hitmarker;
+    public PlayerLife myScript;
+    public float LifeBonus;
 
     void Start()
     {
-
+        myScript = GameObject.Find("Player").GetComponent<PlayerLife>();
     }
 
     // Update is called once per frame
@@ -21,8 +23,14 @@ public class Autodistruzione : MonoBehaviour
             WeaponDatabase weaponDatabase = FindObjectOfType<WeaponDatabase>();
             Instantiate(weaponDatabase.Weapons[Random.Range(0, 2)], EnemyPosition.position, EnemyPosition.rotation);
             Destroy(gameObject);
+
+            if (myScript.lifeTimer < myScript.MaxPlayerLife) 
+            {  
+                myScript.lifeTimer = myScript.lifeTimer + LifeBonus;
+            }
         }
     }
+
 
     public void OnTriggerEnter(Collider other)
     {
