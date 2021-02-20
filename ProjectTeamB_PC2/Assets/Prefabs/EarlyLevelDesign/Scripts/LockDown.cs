@@ -26,7 +26,6 @@ public class LockDown : MonoBehaviour
 
         if (GameObject.FindGameObjectsWithTag("Enemy").Length <= 0)
         {
-            Debug.Log("Alright");
             doorOut.SetActive(false);
         }
     }
