@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - EnemyBullet
   - Cambio
+  - Melee
   layers:
   - Default
   - TransparentFX

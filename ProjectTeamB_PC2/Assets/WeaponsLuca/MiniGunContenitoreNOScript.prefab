@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152aea4d35288714da0f96e1c98259a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponToSpawn: {fileID: 5324291871894724648, guid: b97c9a809e66b4a4087e71f67af8bfd5,
+  WeaponToSpawn: {fileID: 5768222274717358845, guid: f5818ea625875b246b7afe218e7c5730,
     type: 3}
   UipickupText: {fileID: 0}
 --- !u!54 &7768271690667371500

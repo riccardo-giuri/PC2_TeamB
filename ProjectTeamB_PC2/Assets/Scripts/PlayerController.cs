@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
 	public Transform WeaponPointToSpawn;
 	public GameObject CurrentWeapon;
 	public Text UIPickup;
+	public GameObject Melee;
 
 	void Start()
 	{

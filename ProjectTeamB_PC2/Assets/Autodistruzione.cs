@@ -32,5 +32,11 @@ public class Autodistruzione : MonoBehaviour
             gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x + 0.1f, gameObject.transform.localScale.y + 0.1f, gameObject.transform.localScale.z + 0.1f);
             life -= 1;
         }
+        if (other.CompareTag("Melee"))
+        {
+            hitmarker.SetActive(true);
+            gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x + 0.1f, gameObject.transform.localScale.y + 0.1f, gameObject.transform.localScale.z + 0.1f);
+            life -= life;
+        }
     }
 }
