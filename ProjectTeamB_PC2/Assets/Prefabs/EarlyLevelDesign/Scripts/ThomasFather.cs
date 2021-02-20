@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThomasFather : MonoBehaviour
 {
-    public GameObject room1;
+    public GameObject[] rooms;
 
     private float spawnRoomLengh;
     private Vector3 spawnPos;
@@ -19,21 +19,11 @@ public class ThomasFather : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("SpawnPos" + spawnPos);
-
         if (transform.position.z >= spawnPos.z + spawnRoomLengh)
         {
+            int room = Random.Range(0, rooms.Length);
             spawnPos = transform.position;
-            Instantiate(room1, gameObject.transform.position, gameObject.transform.rotation);
+            Instantiate(rooms[room], gameObject.transform.position, gameObject.transform.rotation);
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-       //if (other.CompareTag("Room"))
-       //{
-       //    Debug.Log("EccoloIlBastardo");
-       //    Instantiate(room1, gameObject.transform.position, gameObject.transform.rotation);
-       //}
     }
 }
