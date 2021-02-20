@@ -831,7 +831,7 @@ GameObject:
   - component: {fileID: 1277995108240203096}
   m_Layer: 0
   m_Name: New4DoorRoom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -851,10 +851,7 @@ Transform:
   - {fileID: 8760924740471346022}
   - {fileID: 5376757605815587423}
   - {fileID: 8213387254921569979}
-  - {fileID: 3212982509866431742}
-  - {fileID: 8493240998176394711}
-  - {fileID: 4919793396402015085}
-  - {fileID: 5241127130410713730}
+  - {fileID: 4511318296130284180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1398,8 +1395,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 4
+  m_Father: {fileID: 4511318296130284180}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2870711673259334591
 MonoBehaviour:
@@ -2201,8 +2198,8 @@ Transform:
   - {fileID: 2121929295633934267}
   - {fileID: 2777085020768726574}
   - {fileID: 7978989713237705130}
-  m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 6
+  m_Father: {fileID: 4511318296130284180}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3132226687105960471
 GameObject:
@@ -3072,8 +3069,8 @@ Transform:
   - {fileID: 4139709374665048488}
   - {fileID: 8947452452880455538}
   - {fileID: 723784239948079001}
-  m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 5
+  m_Father: {fileID: 4511318296130284180}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4437952991363243363
 GameObject:
@@ -4537,6 +4534,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &7154474259794244676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4511318296130284180}
+  m_Layer: 0
+  m_Name: PrinceOfPersia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4511318296130284180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7154474259794244676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3212982509866431742}
+  - {fileID: 8493240998176394711}
+  - {fileID: 4919793396402015085}
+  - {fileID: 5241127130410713730}
+  m_Father: {fileID: 3347339143182492877}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7394973078876791370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5831,8 +5862,8 @@ Transform:
   - {fileID: 994830100829065626}
   - {fileID: 2298126832411871031}
   - {fileID: 3548217347646732611}
-  m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 7
+  m_Father: {fileID: 4511318296130284180}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &566022855178746918
 PrefabInstance:
