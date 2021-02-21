@@ -12,7 +12,7 @@ TagManager:
   - Enemy
   - EnemyBullet
   - Cambio
-  - Room
+  - Melee
   layers:
   - Default
   - TransparentFX
