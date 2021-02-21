@@ -808,9 +808,9 @@ MonoBehaviour:
   damageTaken: 1
   MaxPlayerLife: 60
   DelayCountdownHealth: 1.5
-  HPText: {fileID: 0}
-  BulletText: {fileID: 0}
-  mortePanel: {fileID: 0}
+  HPText: {fileID: 1613309106}
+  BulletText: {fileID: 1719186351}
+  mortePanel: {fileID: 1434332615}
 --- !u!114 &314018802
 MonoBehaviour:
   m_ObjectHideFlags: 0
