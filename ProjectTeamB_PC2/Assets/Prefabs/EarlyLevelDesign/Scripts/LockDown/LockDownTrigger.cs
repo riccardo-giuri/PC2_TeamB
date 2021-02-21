@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class LockDownTrigger : MonoBehaviour
 {
-    public GameObject lockDown;
+    public GameObject borderIn, borderOut, lockDown;
 
-    private void OnTriggerEnter(Collider other)
+    private GameObject player;
+
+    void Start()
     {
-        if (other.CompareTag("Player"))
+        player = GameObject.Find("Player");
+    }
+
+    private void Update()
+    {
+        if (player.transform.position.z > borderIn.transform.position.z && player.transform.position.z < borderOut.transform.position.z)
         {
             lockDown.SetActive(true);
         }
     }
-
 }
