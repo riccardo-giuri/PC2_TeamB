@@ -23,22 +23,22 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayScene1()
     {
-        SceneManager.LoadScene(scene1);
+        SceneManager.LoadScene("Prototype13_02");
     }
 
     public void PlayScene2()
     {
-        SceneManager.LoadScene(scene2);
+        SceneManager.LoadScene("Persia Scene");
     }
 
     public void PlayScene3()
     {
-        SceneManager.LoadScene(scene3);
+        SceneManager.LoadScene("PrototypeLockdown");
     }
 
     public void PlayScene4()
     {
-        SceneManager.LoadScene(scene4);
+        SceneManager.LoadScene("PrototypeThomas");
     }
 
     public void CloseGame()

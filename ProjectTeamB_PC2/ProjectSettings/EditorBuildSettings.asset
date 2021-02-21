@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype13_02.unity
     guid: 819cd0897be07284b9fc5b7b3dd60b9f
+  - enabled: 1
+    path: Assets/Scenes/LevelDesignScenes/Persia Scene.unity
+    guid: 4cc920f5c72ff694ebdeb51261959de7
+  - enabled: 1
+    path: Assets/Scenes/LevelDesignScenes/PrototypeLockDown.unity
+    guid: 41b5b4700422cbc43a9fd47340e37472
+  - enabled: 1
+    path: Assets/Scenes/LevelDesignScenes/PrototypeThomas.unity
+    guid: 40496df644c695749a8f487eb4fef2de
   m_configObjects: {}
