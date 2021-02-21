@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ThomasMovement : MonoBehaviour
 {
-    public float speed;
+    public float speed, increaseSpeed;
     public Transform room;
 
     // Start is called before the first frame update

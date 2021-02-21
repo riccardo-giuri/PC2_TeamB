@@ -1307,6 +1307,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  increaseSpeed: 10
   room: {fileID: 677517297}
 --- !u!114 &677517299
 MonoBehaviour:
