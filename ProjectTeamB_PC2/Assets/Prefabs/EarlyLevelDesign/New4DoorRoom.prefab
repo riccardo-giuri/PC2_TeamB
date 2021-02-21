@@ -748,7 +748,7 @@ Transform:
   - {fileID: 1238559879551538441}
   - {fileID: 1961933903129353092}
   m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &706877150268606131
 GameObject:
@@ -793,10 +793,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3347339143182492877}
-  - component: {fileID: 1277995108240203096}
   m_Layer: 0
   m_Name: New4DoorRoom
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,24 +812,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3602912490961293731}
-  - {fileID: 5376757605815587423}
   - {fileID: 8760924740471346022}
+  - {fileID: 5376757605815587423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1277995108240203096
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793208488358745828}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 148, y: 30, z: 145}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &796635427565261513
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,7 +845,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3347339143182492877}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842047490460886519
 GameObject:
