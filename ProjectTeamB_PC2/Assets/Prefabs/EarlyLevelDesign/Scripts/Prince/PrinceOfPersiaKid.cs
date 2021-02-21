@@ -38,7 +38,6 @@ public class PrinceOfPersiaKid : MonoBehaviour
     public void Spawn2()
     {
         wave2.SetActive(true);
-        Debug.Log("Merdone");
     }
 
     public void Spawn3()
