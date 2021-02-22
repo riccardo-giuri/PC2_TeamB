@@ -1686,6 +1686,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1507077381}
   - component: {fileID: 1507077383}
+  - component: {fileID: 1507077384}
   - component: {fileID: 1507077382}
   m_Layer: 0
   m_Name: Camera
@@ -1759,6 +1760,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1507077384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507077380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fbb352b71e815489d88e7828714fc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.15
+  Magnitude: 0.2
 --- !u!1 &1657911450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,7 +2604,7 @@ MonoBehaviour:
   Charge: 100
   BuckshotAngle: 10
   NBuckshot: 7
-  Shoot_Type: 3
+  Shoot_Type: 0
 --- !u!114 &5375734988583239922
 MonoBehaviour:
   m_ObjectHideFlags: 0

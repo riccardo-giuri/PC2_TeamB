@@ -10,6 +10,7 @@ public class WeaponShoot : ShootingBase
     public int NBuckshot;
     PauseMenu PM;
     PlayerLife PL;
+    CameraShake CS;
     List<Quaternion> Bullets;
 
     public enum ShootType
@@ -37,6 +38,7 @@ public class WeaponShoot : ShootingBase
     {
         PM = FindObjectOfType<PauseMenu>();
         PL = FindObjectOfType<PlayerLife>();
+        CS = FindObjectOfType<CameraShake>();
         PL.BulletTimer = Charge;
     }
 
@@ -116,10 +118,12 @@ public class WeaponShoot : ShootingBase
         if(Shoot_Type==ShootType.Auto)
         {
             Shooting();
+            StartCoroutine(CS.Shake());
         }
         else if(Shoot_Type==ShootType.Single)
         {
             Shooting();
+            StartCoroutine(CS.Shake());
             CanShoot = false;
             yield return new WaitForSeconds(Delay[1]);
             CanShoot = true;
@@ -129,6 +133,7 @@ public class WeaponShoot : ShootingBase
             for (int i= 0; i<3; i++)
             {
                 Shooting();
+                StartCoroutine(CS.Shake());
                 yield return new WaitForSeconds(Delay[1]);
             }
             CanShoot = false;
@@ -138,6 +143,7 @@ public class WeaponShoot : ShootingBase
         else if(Shoot_Type==ShootType.Buckshot)
         {
             Buckshot();
+            StartCoroutine(CS.Shake());
             CanShoot = false;
             yield return new WaitForSeconds(Delay[1]);
             CanShoot = true;
