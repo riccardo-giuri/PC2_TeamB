@@ -3624,9 +3624,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84980d288971e3d41b41c8847c01ee00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time1: 15
-  time2: 10
-  time3: 5
+  time1: 0
+  time2: 60
+  time3: 30
   wave1: {fileID: 3934500235220364660}
   wave2: {fileID: 4939606934633249853}
   wave3: {fileID: 6595463166773422743}

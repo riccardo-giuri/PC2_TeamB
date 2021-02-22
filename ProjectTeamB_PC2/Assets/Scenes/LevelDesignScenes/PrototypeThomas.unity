@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTimer: 60
   BulletTimer: 0
-  damageTaken: 1
+  damageTaken: 5
   MaxPlayerLife: 60
   DelayCountdownHealth: 1.5
   HPText: {fileID: 651815817}
