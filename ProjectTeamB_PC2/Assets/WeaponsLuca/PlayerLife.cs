@@ -11,6 +11,7 @@ public class PlayerLife : MonoBehaviour {
     public GameObject mortePanel;
 
     bool lifeTimerFake = false;
+    private Coroutine lastcallcoroutine;
 
     public void Awake() {
         Time.timeScale = 1;
@@ -42,12 +43,24 @@ public class PlayerLife : MonoBehaviour {
         }
     }
 
-    
+    public IEnumerator LastCall() {
+
+        yield return new WaitForSeconds(DelayCountdownHealth);
+
+        while (lifeTimer > MaxPlayerLife) {
+
+            lifeTimer -= Time.fixedDeltaTime;
+            yield return null;
+
+        }
+
+        lastcallcoroutine = null;
+    }
+
     void FixedUpdate() 
     {
-        if (lifeTimer > MaxPlayerLife) 
-        {
-            Invoke("ChiVuoiTu", DelayCountdownHealth);
+        if (lifeTimer > MaxPlayerLife && lastcallcoroutine == null) {
+            lastcallcoroutine = StartCoroutine(LastCall());
         }
     }
 
