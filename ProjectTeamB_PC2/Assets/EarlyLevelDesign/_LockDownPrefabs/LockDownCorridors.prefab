@@ -1071,7 +1071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e20f0b00f548841a839ffb5374d38a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockDownTime: 8
+  lockDownTime: 7
   enemyWave: {fileID: 8268105576293032479}
   doorOut: {fileID: 6108630177448977583}
   doorIn: {fileID: 473605047193078713}
