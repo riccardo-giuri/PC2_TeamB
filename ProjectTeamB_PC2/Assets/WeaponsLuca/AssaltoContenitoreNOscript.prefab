@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152aea4d35288714da0f96e1c98259a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponToSpawn: {fileID: 7653439271170983546, guid: d7e5a6093476ef24c90a13fc358c1c25,
+  WeaponToSpawn: {fileID: 1128862741093143262, guid: 91c46a40be0219f4198f06130d0c19d0,
     type: 3}
   UipickupText: {fileID: 0}
 --- !u!54 &1360145749242558887
@@ -674,10 +674,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7221518099863682987, guid: 8db3dd087d9e77b4aba169f9e3c90f79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5828692632263983514, guid: 8db3dd087d9e77b4aba169f9e3c90f79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8db3dd087d9e77b4aba169f9e3c90f79,
         type: 3}
       propertyPath: m_Name
       value: AR_game
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8db3dd087d9e77b4aba169f9e3c90f79,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8db3dd087d9e77b4aba169f9e3c90f79,
         type: 3}
