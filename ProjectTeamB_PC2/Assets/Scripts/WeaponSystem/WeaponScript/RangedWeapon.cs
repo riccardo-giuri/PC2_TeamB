@@ -15,10 +15,24 @@ public class RangedWeapon : MonoBehaviour
     /// </summary>
     public float TotalDamage;
 
+    /// <summary>
+    /// Number of ammo shotted by the weapon in one minute
+    /// </summary>
+    public int FireRateo;
+
+    /// <summary>
+    /// Position where projectiles are spawned from ranged weapons
+    /// </summary>
+    public Transform GunBarrel;
+
+    public GameObject WeaponBulletPrefab;
+
     //variabili che vanno inserite post shooting system
     //current weapon shooting type
     //starting shooting type
-    
+
+
+
 
     /// <summary>
     /// Calculate the hit Damage of the weapon after a Range
