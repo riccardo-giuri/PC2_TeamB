@@ -33,6 +33,10 @@ public class WeaponData : ScriptableObject
     /// Amount of force that knockback the player when he shoot with this weapon
     /// </summary>
     public float RecoilKnockBack;
+    /// <summary>
+    /// Amount of force the weapon give to the projectile shooted
+    /// </summary>
+    public float ShootingForce;
 
     //sarà la lista dei tipi di shooting che la nostra arma avrà
     

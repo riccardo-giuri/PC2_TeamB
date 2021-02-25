@@ -4,21 +4,16 @@ using UnityEngine;
 
 public class SingleShotShooting : Shooting
 {
-
-
-    // Start is called before the first frame update
-    void Start()
+    public override void ShootingAction(RangedWeapon currentWeapon)
     {
-        
+        if(CanWeaponShoot == true)
+        {
+            Shoot(currentWeapon);
+            StartCoroutine(ActivateShotCooldown(ShotCooldown));
+        }       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public override void Shoot(RangedWeapon CurrentWeapon)
+    public override void Shoot(RangedWeapon currentWeapon)
     {
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
@@ -31,8 +26,12 @@ public class SingleShotShooting : Shooting
             ShootingTargetPoint = ray.GetPoint(80);
         }
 
-        Vector3 ShootingDirection = ShootingTargetPoint - CurrentWeapon.GunBarrel.position;
+        Vector3 ShootingDirection = ShootingTargetPoint - currentWeapon.GunBarrel.position;
 
-        GameObject currentBullet = Instantiate(bulletPrefab, CurrentWeapon.GunBarrel.position, Quaternion.identity);
+        GameObject BulletInstance = Instantiate(currentWeapon.WeaponBulletPrefab , currentWeapon.GunBarrel.position, Quaternion.identity);
+
+        BulletInstance.transform.forward = ShootingDirection.normalized;
+
+        BulletInstance.GetComponent<Rigidbody>().AddForce(ShootingDirection.normalized * currentWeapon.weaponData.ShootingForce, ForceMode.Impulse);
     }
 }

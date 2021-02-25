@@ -4650,13 +4650,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3648706157099459366, guid: d7e5a6093476ef24c90a13fc358c1c25,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648706157099459366, guid: d7e5a6093476ef24c90a13fc358c1c25,
+        type: 3}
       propertyPath: DrainSpeed
       value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4455255572089308155, guid: d7e5a6093476ef24c90a13fc358c1c25,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455255572089308155, guid: d7e5a6093476ef24c90a13fc358c1c25,
+        type: 3}
+      propertyPath: upwardForce
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7406169933360587520, guid: d7e5a6093476ef24c90a13fc358c1c25,
         type: 3}

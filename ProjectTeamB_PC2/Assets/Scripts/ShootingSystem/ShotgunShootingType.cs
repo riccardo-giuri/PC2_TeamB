@@ -1,0 +1,71 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ShotgunShootingType : Shooting
+{
+    /// <summary>
+    /// number of shots in a sigle pallet
+    /// </summary>
+    public int PalletShotNumber;
+    /// <summary>
+    /// percentage of bloom you desire on the shot
+    /// </summary>
+    public float Bloom;
+
+    public override void ShootingAction(RangedWeapon currentWeapon)
+    {
+        if (CanWeaponShoot == true)
+        {
+            Shoot(currentWeapon);
+            StartCoroutine(ActivateShotCooldown(ShotCooldown));
+        }
+    }
+
+    public override void Shoot(RangedWeapon currentWeapon)
+    {
+        for (int palletsShot = 0; palletsShot < PalletShotNumber; palletsShot++)
+        {
+            Vector2 randomBloom = new Vector2(GetRandomBloomValue(Bloom), GetRandomBloomValue(Bloom));
+
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(randomBloom.x, randomBloom.y, 0));
+
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                ShootingTargetPoint = hit.point;
+            }
+            else
+            {
+                ShootingTargetPoint = ray.GetPoint(80);
+            }
+
+            Vector3 ShootingDirection = ShootingTargetPoint - currentWeapon.GunBarrel.position;
+
+            GameObject BulletInstance = Instantiate(currentWeapon.WeaponBulletPrefab, currentWeapon.GunBarrel.position, Quaternion.identity);
+
+            BulletInstance.transform.forward = ShootingDirection.normalized;
+
+            BulletInstance.GetComponent<Rigidbody>().AddForce(ShootingDirection.normalized * currentWeapon.weaponData.ShootingForce, ForceMode.Impulse);
+        }        
+    }
+
+    public float GetRandomBloomValue(float BloomPercentage)
+    {
+        float bloomPercentageValue = (0.5f / 100) * BloomPercentage;
+        float randomBloomPercentage = Random.Range(0f, bloomPercentageValue);
+
+        float randomBloom;
+        
+        int sign = Random.Range(0, 2);
+        if(sign == 0)
+        {
+            randomBloom = 0.5f - randomBloomPercentage;
+        }
+        else
+        {
+            randomBloom = 0.5f + randomBloomPercentage;
+        }
+
+        return randomBloom;
+    }
+}
