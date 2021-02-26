@@ -30,9 +30,7 @@ public class MeleeRicarica : MonoBehaviour
             timerPerMelee = Time.deltaTime;
             possoColpire = true;
         }
-            
-
-        
+       
         
         if (Input.GetKeyDown(KeyCode.R) && possoColpire)
         {
@@ -48,6 +46,6 @@ public class MeleeRicarica : MonoBehaviour
             anim.SetBool(animazione, false);
         }
 
-        Debug.Log("manca" + timerPerMelee);
+        Debug.Log("manca" + Mathf.Round(timerPerMelee));
     }
 }

@@ -49,6 +49,6 @@ public class PauseMenu : MonoBehaviour
 
     public void Reload()
     {
-        SceneManager.LoadScene("LevelDesigDavideBuildingScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
