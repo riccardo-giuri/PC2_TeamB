@@ -8,17 +8,13 @@ public class WeaponData : ScriptableObject
     /// <summary>
     /// Charge value of a weapon
     /// </summary>
-    public float Charge;
-    /// <summary>
-    /// Position where projectiles are spawned from ranged weapons
-    /// </summary>
-    public Vector3 GunBarrel;
+    public float Charge;    
     /// <summary>
     /// Damage value of a single projectile
     /// </summary>
     public float Damage;
     /// <summary>
-    /// First Projectile Damage 
+    /// First Projectile Damage percentage buff
     /// </summary>
     public float FirstProjectileDamage;
     /// <summary>
@@ -32,16 +28,14 @@ public class WeaponData : ScriptableObject
     /// <summary>
     /// Percentage damage reduction after the range distance
     /// </summary>
-    public float RangeDmgReduction;
-    /// <summary>
-    /// Projectile that the weapon shoot in one minute 
-    /// </summary>
-    public int FireRateo;
+    public float RangeDmgReduction;    
     /// <summary>
     /// Amount of force that knockback the player when he shoot with this weapon
     /// </summary>
     public float RecoilKnockBack;
-
-    //sarà la lista dei tipi di shooting che la nostra arma avrà
-    //public List<Shooting> WeaponShootingMode;
+    /// <summary>
+    /// Amount of force the weapon give to the projectile shooted
+    /// </summary>
+    public float ShootingForce;
+    
 }

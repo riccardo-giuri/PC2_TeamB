@@ -8,17 +8,29 @@ public class RangedWeapon : MonoBehaviour
     /// Current weapont datas
     /// </summary>
     public WeaponData weaponData;
-
-    //va calcolata poi in modo differente nelle classi shooting type
     /// <summary>
     /// Total Damage done by a weapon
     /// </summary>
     public float TotalDamage;
+    /// <summary>
+    /// Number of ammo shotted by the weapon in one minute
+    /// </summary>
+    public int FireRateo;
+    /// <summary>
+    /// Position where projectiles are spawned from ranged weapons
+    /// </summary>
+    public Transform GunBarrel;
+    /// <summary>
+    /// Prefab of the bullet that will be shooted by this weapon
+    /// </summary>
+    public GameObject WeaponBulletPrefab;
+    /// <summary>
+    /// Type of shooting of this weapon
+    /// </summary>
+    public Shooting ShootingType;
 
-    //variabili che vanno inserite post shooting system
-    //current weapon shooting type
-    //starting shooting type
-    
+
+
 
     /// <summary>
     /// Calculate the hit Damage of the weapon after a Range
@@ -67,6 +79,29 @@ public class RangedWeapon : MonoBehaviour
         playerRB.AddForce(reverseDirection, ForceMode.Impulse);
     }
 
-    //metodo che switcha tra le varie forme di shooting
-    //Change shooting type
+    /// <summary>
+    /// Update the value of FireRateo if it change during Play Time
+    /// </summary>
+    public void UpdateFireRateoValue()
+    {
+        float newFireRateo = ShootingType.CalculateFireRateo();
+
+        if(FireRateo != newFireRateo)
+        {
+            FireRateo = Mathf.RoundToInt(newFireRateo);
+        }
+    }
+
+    /// <summary>
+    /// Update the value of Total Damage if it change during Play Time
+    /// </summary>
+    public void UpdateTotalDamageValue()
+    {
+        float newTotalDamage = ShootingType.CalculateTotalDamage(this);
+
+        if (TotalDamage != newTotalDamage)
+        {
+            TotalDamage = Mathf.RoundToInt(newTotalDamage);
+        }
+    }
 }
