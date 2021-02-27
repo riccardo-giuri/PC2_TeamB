@@ -9,12 +9,16 @@ public class PlayerShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CurrentRagedWeapon.ShootingType.SetupCanWeaponShoot(CurrentRagedWeapon.ShootingType.CanWeaponShoot);
+        CurrentRagedWeapon.ShootingType.SetupCanWeaponShoot();
     }
 
     // Update is called once per frame
     void Update()
     {
+        CurrentRagedWeapon.UpdateFireRateoValue();
+        CurrentRagedWeapon.UpdateTotalDamageValue();
+
+        //Execute shooting
         if (Input.GetMouseButtonDown(0) && CurrentRagedWeapon.ShootingType.IsAutomatic == false)
         {
             CurrentRagedWeapon.ShootingType.ShootingAction(CurrentRagedWeapon);

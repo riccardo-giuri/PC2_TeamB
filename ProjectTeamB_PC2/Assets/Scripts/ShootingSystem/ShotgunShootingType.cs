@@ -18,7 +18,7 @@ public class ShotgunShootingType : Shooting
         if (CanWeaponShoot == true)
         {
             Shoot(currentWeapon);
-            StartCoroutine(ActivateShotCooldown(ShotCooldown));
+            StartCoroutine(WaitShotCooldown(ShotCooldown));
         }
     }
 
@@ -49,6 +49,11 @@ public class ShotgunShootingType : Shooting
         }        
     }
 
+    /// <summary>
+    /// calculate and return a random bloom value based on a percentage
+    /// </summary>
+    /// <param name="BloomPercentage"></param>
+    /// <returns></returns>
     public float GetRandomBloomValue(float BloomPercentage)
     {
         float bloomPercentageValue = (0.5f / 100) * BloomPercentage;
@@ -67,5 +72,19 @@ public class ShotgunShootingType : Shooting
         }
 
         return randomBloom;
+    }
+
+    public override float CalculateFireRateo()
+    {
+        float firerateo = 60 / ShotCooldown;
+
+        return firerateo;
+    }
+
+    public override float CalculateTotalDamage(RangedWeapon CurrentWeapon)
+    {
+        float totalDamage = CurrentWeapon.weaponData.Damage * PalletShotNumber;
+
+        return totalDamage;
     }
 }

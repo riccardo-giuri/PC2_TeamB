@@ -14,7 +14,7 @@ public class WeaponData : ScriptableObject
     /// </summary>
     public float Damage;
     /// <summary>
-    /// First Projectile Damage 
+    /// First Projectile Damage percentage buff
     /// </summary>
     public float FirstProjectileDamage;
     /// <summary>
@@ -37,7 +37,5 @@ public class WeaponData : ScriptableObject
     /// Amount of force the weapon give to the projectile shooted
     /// </summary>
     public float ShootingForce;
-
-    //sarà la lista dei tipi di shooting che la nostra arma avrà
     
 }

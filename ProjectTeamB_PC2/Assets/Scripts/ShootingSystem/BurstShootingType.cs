@@ -7,7 +7,7 @@ public class BurstShootingType : Shooting
     /// <summary>
     /// Number of shots in single burst
     /// </summary>
-    public int SingleBurstShots;
+    public int SingleBurstShotNumber;
     /// <summary>
     /// Cooldown timer between bursts fire
     /// </summary>
@@ -18,7 +18,7 @@ public class BurstShootingType : Shooting
         if(CanWeaponShoot == true)
         {
             StartCoroutine(ShootBurst(ShotCooldown, currentWeapon));
-            StartCoroutine(ActivateShotCooldown(CooldownBetweenBursts));
+            StartCoroutine(WaitShotCooldown(CooldownBetweenBursts));
         }       
     }
 
@@ -44,16 +44,40 @@ public class BurstShootingType : Shooting
         BulletInstance.GetComponent<Rigidbody>().AddForce(ShootingDirection.normalized * currentWeapon.weaponData.ShootingForce, ForceMode.Impulse);
     }
 
+    /// <summary>
+    /// coroutine that shoot a burst and wait the shot cooldown between them
+    /// </summary>
+    /// <param name="shotCooldown"></param>
+    /// <param name="currentWeapon"></param>
+    /// <returns></returns>
     public IEnumerator ShootBurst(float shotCooldown, RangedWeapon currentWeapon)
     {
-        if (SingleBurstShots >= 2)
+        if (SingleBurstShotNumber >= 2)
         {
-            for (int shots = 0; shots < SingleBurstShots; shots++)
+            for (int shots = 0; shots < SingleBurstShotNumber; shots++)
             {
                 Shoot(currentWeapon);
                 yield return new WaitForSeconds(shotCooldown);
             }
         }
 
+    }
+
+    public override float CalculateFireRateo()
+    {
+        float OneBurstTime = ((SingleBurstShotNumber - 1) * ShotCooldown) + CooldownBetweenBursts;
+
+        float BurstPerMinute = 60 / OneBurstTime;
+
+        float firerateo = BurstPerMinute * SingleBurstShotNumber;
+
+        return firerateo;
+    }
+
+    public override float CalculateTotalDamage(RangedWeapon CurrentWeapon)
+    {
+        float totalDamage = CurrentWeapon.weaponData.Damage * SingleBurstShotNumber;
+
+        return totalDamage;
     }
 }

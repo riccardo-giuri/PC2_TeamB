@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RifleTest
   m_EditorClassIdentifier: 
   Charge: 0
-  Damage: 0
+  Damage: 10
   FirstProjectileDamage: 0
   Weight: 0
   Range: 0
