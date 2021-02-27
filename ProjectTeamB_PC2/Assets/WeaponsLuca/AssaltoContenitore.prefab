@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1128862741093143263}
   - component: {fileID: 6314433210036408091}
-  - component: {fileID: 1824690914715968717}
-  - component: {fileID: 240094348435191716}
   - component: {fileID: 7454800249940452443}
   - component: {fileID: 4773969132860274558}
+  - component: {fileID: 1102484232106720870}
+  - component: {fileID: 2183561558025374623}
+  - component: {fileID: 7694223064832951698}
   m_Layer: 2
   m_Name: AssaltoContenitore
   m_TagString: Weapon
@@ -49,35 +50,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.29726318, y: 0.46089506, z: 0.34781602}
   m_Center: {x: -0.11519983, y: -0.1278127, z: -0.4621019}
---- !u!114 &1824690914715968717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128862741093143262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentuale: 10
-  animazione: Melee
---- !u!114 &240094348435191716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128862741093143262}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a05d1198f7af447b9c9fa2d1ceb076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerPerMelee: 5
-  timerRicaricaMelee: 5
-  animazione: Melee
 --- !u!114 &7454800249940452443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,8 +81,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 079ca0fe249761744b9525269e9aabd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotCooldown: 0.5
+  ShotCooldown: 0.1
   IsAutomatic: 0
+--- !u!114 &1102484232106720870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128862741093143262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d00cf14ac9940458ba2ad6bc5c1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caricatore: 14
+  colpiSparati: 1
+  tapTime: 0.2
+--- !u!95 &2183561558025374623
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128862741093143262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de715cd444ed8114584253758ad4643b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7694223064832951698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128862741093143262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentuale: 5
+  animazione: Melee
 --- !u!1 &1128862741801262801
 GameObject:
   m_ObjectHideFlags: 0

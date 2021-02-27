@@ -7,9 +7,13 @@ public class PlayerLifeWIP : MonoBehaviour
 {
     public float lifeTimer, BulletTimer, damageTaken, MaxPlayerLife, DelayCountdownHealth;
 
-    public Text HPText, BulletText;
+    public Text HPText, BulletText, BulletText2;
 
     public GameObject mortePanel;
+
+    private Ammo Munizioni;
+
+    private MiniGunAmmo MunizioniMinigun;
 
     public bool perdoVita;
 
@@ -26,13 +30,18 @@ public class PlayerLifeWIP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         HPText.text = lifeTimer.ToString("N1");
     }
 
     // Update is called once per frame
     void Update()
     {
-        BulletText.text = BulletTimer.ToString("N1");
+        Munizioni = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Ammo>();
+        MunizioniMinigun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<MiniGunAmmo>();
+
+        //BulletText2.text = Munizioni.caricatore.ToString("N1");
+
         HPText.text = lifeTimer.ToString("N1");
 
         if (BulletTimer != 0 && Carica)
@@ -58,6 +67,7 @@ public class PlayerLifeWIP : MonoBehaviour
             lifeTimer -= Time.deltaTime;
             HPText.text = lifeTimer.ToString("N1");
         }
+        
     }
 
     public IEnumerator LastCall()

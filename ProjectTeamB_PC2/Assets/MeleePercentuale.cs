@@ -5,7 +5,7 @@ using UnityEngine;
 public class MeleePercentuale : MonoBehaviour
 {
     
-    private PlayerLife playerLifeScript;
+    private PlayerLifeWIP playerLifeScript;
     public float percentuale;
     private float percentualeDaSottrarre;
     private Animator anim;
@@ -17,7 +17,7 @@ public class MeleePercentuale : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerController>();
-        playerLifeScript = GameObject.Find("Player").GetComponent<PlayerLife>();
+        playerLifeScript = GameObject.Find("Player").GetComponent<PlayerLifeWIP>();
     }
     public void Update()
     {

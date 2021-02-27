@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 3015013508762413181}
   m_Layer: 2
   m_Name: PompaContenitoreNOScript
-  m_TagString: Weapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,7 +89,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.6
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &7435590231921952956
 Rigidbody:

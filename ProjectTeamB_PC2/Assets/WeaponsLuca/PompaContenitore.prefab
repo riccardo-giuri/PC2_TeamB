@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 5596386738465220155}
   - component: {fileID: 2295307763537824873}
   - component: {fileID: 6553608800325939929}
+  - component: {fileID: 8361985817119975728}
   m_Layer: 2
   m_Name: PompaContenitore
   m_TagString: Weapon
@@ -112,6 +113,21 @@ MonoBehaviour:
   IsAutomatic: 0
   PalletShotNumber: 5
   Bloom: 8
+--- !u!114 &8361985817119975728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864820959198554368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d00cf14ac9940458ba2ad6bc5c1501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caricatore: 15
+  colpiSparati: 5
+  tapTime: 0.5
 --- !u!1001 &7786933471054498918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,37 +143,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.09548055
+      value: 0.13695706
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.73016465
+      value: -0.7308955
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07423955
+      value: -0.0701552
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99490535
+      value: 0.99562556
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.07858067
+      value: -0.08018642
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.050232653
+      value: -0.047627516
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.038276747
+      value: -0.0056150663
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
@@ -172,7 +188,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -3.966
+      value: -0.20600002
       objectReference: {fileID: 0}
     - target: {fileID: -6295847236071286009, guid: c57fe532dc9ea9a4ba4794f524bf81a2,
         type: 3}

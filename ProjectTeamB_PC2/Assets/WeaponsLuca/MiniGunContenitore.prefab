@@ -41,9 +41,9 @@ GameObject:
   - component: {fileID: 1743554235552740793}
   - component: {fileID: 6389849927448600107}
   - component: {fileID: 1062666445168922011}
-  - component: {fileID: 2390116532888807055}
   - component: {fileID: 8114603960560752605}
   - component: {fileID: 7942035697525685107}
+  - component: {fileID: 5480253997427288852}
   m_Layer: 2
   m_Name: MiniGunContenitore
   m_TagString: Weapon
@@ -94,20 +94,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.66833067, y: 0.6220516, z: 0.7681538}
   m_Center: {x: -0.077855945, y: 0.03701672, z: 0.1632693}
---- !u!114 &2390116532888807055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743554235552740792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  percentuale: 0
-  animazione: Melee
 --- !u!114 &8114603960560752605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +127,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShotCooldown: 0.01
   IsAutomatic: 1
+--- !u!114 &5480253997427288852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743554235552740792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deff65eecd2695f46822630a8dc1970c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caricatore: 50
+  colpiSparati: 1
+  tapTime: 0
 --- !u!95 &8979521223838616693
 Animator:
   serializedVersion: 3
