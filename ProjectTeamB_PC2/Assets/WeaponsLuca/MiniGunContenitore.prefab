@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8114603960560752605}
   - component: {fileID: 7942035697525685107}
   - component: {fileID: 5480253997427288852}
+  - component: {fileID: 7055716745831493585}
   m_Layer: 2
   m_Name: MiniGunContenitore
   m_TagString: Weapon
@@ -142,6 +143,20 @@ MonoBehaviour:
   caricatore: 50
   colpiSparati: 1
   tapTime: 0
+--- !u!114 &7055716745831493585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743554235552740792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentuale: 5
+  animazione: Melee
 --- !u!95 &8979521223838616693
 Animator:
   serializedVersion: 3

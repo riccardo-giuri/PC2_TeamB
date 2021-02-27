@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6917982554982950556}
   - component: {fileID: 8399320458591277080}
-  - component: {fileID: 8831342923266096706}
   - component: {fileID: 5034120532906203429}
   - component: {fileID: 399277110786589498}
   - component: {fileID: 3800969575007329979}
+  - component: {fileID: 1226913102297632900}
   m_Layer: 2
   m_Name: MitragliettaContenitore
   m_TagString: Weapon
@@ -49,21 +49,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.24488431, y: 0.38329607, z: 0.14701718}
   m_Center: {x: -0.105344646, y: -0.32670733, z: -0.43201604}
---- !u!114 &8831342923266096706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6917982554982950557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a05d1198f7af447b9c9fa2d1ceb076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerPerMelee: 5
-  timerRicaricaMelee: 5
-  animazione: Melee
 --- !u!114 &5034120532906203429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +99,20 @@ MonoBehaviour:
   caricatore: 20
   colpiSparati: 5
   tapTime: 0.5
+--- !u!114 &1226913102297632900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6917982554982950557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentuale: 5
+  animazione: Melee
 --- !u!1 &7566486661910393231
 GameObject:
   m_ObjectHideFlags: 0
