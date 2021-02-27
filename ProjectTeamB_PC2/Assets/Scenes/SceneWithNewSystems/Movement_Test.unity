@@ -451,7 +451,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679028434}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4396793059c81a4aafc3b0ffaa7a4dc, type: 3}
   m_Name: 
@@ -463,6 +463,7 @@ MonoBehaviour:
   CurrentWeapon: {fileID: 1576911726}
   UIPickup: {fileID: 0}
   Melee: {fileID: 826402518}
+  PlayerShooting: {fileID: 0}
 --- !u!143 &679028437
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1158,10 +1159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6c30387a267474ea3f214f89508a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShotCooldown: 0.5
+  ShotCooldown: 0
   IsAutomatic: 0
-  PalletShotNumber: 5
-  Bloom: 10
+  PalletShotNumber: 6
+  Bloom: 6
 --- !u!1 &1933515910
 GameObject:
   m_ObjectHideFlags: 0

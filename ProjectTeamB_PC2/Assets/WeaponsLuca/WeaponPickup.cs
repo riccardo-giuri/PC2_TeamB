@@ -44,6 +44,7 @@ public class WeaponPickup : MonoBehaviour
         Destroy(playerController.CurrentWeapon);
         GameObject CurrentNewWeapon = Instantiate(WeaponToSpawn, playerController.WeaponPointToSpawn);
         playerController.CurrentWeapon = CurrentNewWeapon;
+        playerController.PlayerShooting.CurrentRagedWeapon = CurrentNewWeapon.GetComponent<RangedWeapon>();
         playerController.UIPickup.gameObject.SetActive(false);
         Destroy(this.gameObject);
     }

@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
 	public GameObject CurrentWeapon;
 	public Text UIPickup;
 	public GameObject Melee;
+	public PlayerShooting PlayerShooting;
 
 	void Start()
 	{
 		cController = GetComponent<CharacterController>();
+		PlayerShooting = GetComponent<PlayerShooting>();
 	}
 
 	void Update()
