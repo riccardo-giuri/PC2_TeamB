@@ -3,52 +3,70 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerLife : MonoBehaviour {
-
+public class PlayerLifeWIP : MonoBehaviour
+{
     public float lifeTimer, BulletTimer, damageTaken, MaxPlayerLife, DelayCountdownHealth;
 
     public Text HPText, BulletText;
 
     public GameObject mortePanel;
 
-    bool lifeTimerFake = false;
+    public bool perdoVita;
+
+    public bool perdoVitaSempre;
+
+    public bool Carica;
+
     private Coroutine lastcallcoroutine;
 
-    public void Awake() {
+    public void Awake()
+    {
         Time.timeScale = 1;
     }
     // Start is called before the first frame update
-    void Start() {
+    void Start()
+    {
         HPText.text = lifeTimer.ToString("N1");
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
+        BulletText.text = BulletTimer.ToString("N1");
         HPText.text = lifeTimer.ToString("N1");
 
-        if (BulletTimer != 0) {
-            BulletTimer -= Time.deltaTime;
-            BulletText.text = BulletTimer.ToString("N1");
+        if (BulletTimer != 0 && Carica)
+        {
+            BulletTimer -= Time.deltaTime;          
         }
 
-        if (BulletTimer <= 0) {
-            //lifeTimer -= Time.deltaTime;
-            //HPText.text = lifeTimer.ToString("N1");
+        if (BulletTimer <= 0 && perdoVita)
+        {
+           lifeTimer -= Time.deltaTime;        
         }
 
-        if (lifeTimer <= 0) {
+        if (lifeTimer <= 0)
+        {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;
             mortePanel.SetActive(true);
         }
+
+        if (perdoVitaSempre)
+        {
+            lifeTimer -= Time.deltaTime;
+            HPText.text = lifeTimer.ToString("N1");
+        }
     }
 
-    public IEnumerator LastCall() {
+    public IEnumerator LastCall()
+    {
 
         yield return new WaitForSeconds(DelayCountdownHealth);
 
-        while (lifeTimer > MaxPlayerLife) {
+        while (lifeTimer > MaxPlayerLife)
+        {
 
             lifeTimer -= Time.fixedDeltaTime;
             yield return null;
@@ -58,9 +76,10 @@ public class PlayerLife : MonoBehaviour {
         lastcallcoroutine = null;
     }
 
-    void FixedUpdate() 
+    void FixedUpdate()
     {
-        if (lifeTimer > MaxPlayerLife && lastcallcoroutine == null) {
+        if (lifeTimer > MaxPlayerLife && lastcallcoroutine == null)
+        {
             lastcallcoroutine = StartCoroutine(LastCall());
         }
     }
@@ -74,7 +93,8 @@ public class PlayerLife : MonoBehaviour {
         }
     }
 
-    public void ChiVuoiTu() {
+    public void ChiVuoiTu()
+    {
         lifeTimer -= Time.fixedDeltaTime;
     }
 }

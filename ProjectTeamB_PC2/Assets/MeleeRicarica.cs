@@ -35,10 +35,10 @@ public class MeleeRicarica : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) && possoColpire)
         {
             playerController.Melee.gameObject.SetActive(true);
-            anim.SetBool(animazione, true);
             timerPerMelee = timerRicaricaMelee;
             possoColpire = false;
-                        
+            anim.SetBool(animazione, true);
+
         }
         else
         {
