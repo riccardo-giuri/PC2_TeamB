@@ -23,7 +23,7 @@ public class AutodistruzioneWIP : MonoBehaviour
         {
             Transform EnemyPosition = gameObject.transform;
             WeaponDatabase weaponDatabase = FindObjectOfType<WeaponDatabase>();
-            Instantiate(weaponDatabase.Weapons[Random.Range(0, 3)], EnemyPosition.position, EnemyPosition.rotation);
+            Instantiate(weaponDatabase.Weapons[Random.Range(0, 4)], EnemyPosition.position, EnemyPosition.rotation);
             Destroy(gameObject);
 
             if (myScript.lifeTimer < myScript.MaxPlayerLife)
