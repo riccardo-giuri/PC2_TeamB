@@ -13,7 +13,6 @@ public class PlayerLifeWIP : MonoBehaviour
 
     private Ammo Munizioni;
 
-    private MiniGunAmmo MunizioniMinigun;
 
     public bool perdoVita;
 
@@ -38,9 +37,9 @@ public class PlayerLifeWIP : MonoBehaviour
     void Update()
     {
         Munizioni = GameObject.FindGameObjectWithTag("Weapon").GetComponent<Ammo>();
-        MunizioniMinigun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<MiniGunAmmo>();
+        
 
-        //BulletText2.text = Munizioni.caricatore.ToString("N1");
+        
 
         HPText.text = lifeTimer.ToString("N1");
 
@@ -67,7 +66,7 @@ public class PlayerLifeWIP : MonoBehaviour
             lifeTimer -= Time.deltaTime;
             HPText.text = lifeTimer.ToString("N1");
         }
-        
+        BulletText2.text = Munizioni.caricatore.ToString("N1");
     }
 
     public IEnumerator LastCall()
