@@ -31,11 +31,18 @@ public class OpenDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        isOpen = true;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isOpen = true;
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        isOpen = false;
+        if (other.gameObject.CompareTag("Player"))
+        {
+            isOpen = false;
+        }
     }
 }

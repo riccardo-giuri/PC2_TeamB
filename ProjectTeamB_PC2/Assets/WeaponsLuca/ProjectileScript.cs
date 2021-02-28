@@ -24,6 +24,7 @@ public class ProjectileScript : MonoBehaviour
             hitOn = true;
             Destroy(gameObject);
        }
+       
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -32,6 +33,7 @@ public class ProjectileScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     IEnumerator Hitten()
