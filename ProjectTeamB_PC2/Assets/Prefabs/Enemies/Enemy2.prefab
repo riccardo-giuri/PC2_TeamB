@@ -286,7 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 2
-  hitmarker: {fileID: 0}
+  myScript: {fileID: 0}
+  LifeBonus: 0
 --- !u!114 &-2472739036045445656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,7 +423,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 293fe4c2ac14c614b9daf0d4f95fa646, type: 2}
+      objectReference: {fileID: 2100000, guid: 2d56b3d628f714f41b3f464834061fe5, type: 2}
     - target: {fileID: 8288180867435543432, guid: 7a23c0959bcea864fbc0692db6e8aed2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
