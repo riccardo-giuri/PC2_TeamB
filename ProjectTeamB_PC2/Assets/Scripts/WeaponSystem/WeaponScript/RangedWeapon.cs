@@ -40,6 +40,10 @@ public class RangedWeapon : MonoBehaviour
     /// <param name="RangeDistance"></param>
     /// <param name="percentageDmgReduction"></param>
     /// <returns></returns>
+    /// 
+
+
+    
     public float CalculateRangeDamageDrop(float HitDistance, float Damage, float RangeDistance, float percentageDmgReduction)
     {
         if(HitDistance > RangeDistance)

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour {
+
     public float lifeTimer, BulletTimer, damageTaken, MaxPlayerLife, DelayCountdownHealth;
 
     public Text HPText, BulletText;

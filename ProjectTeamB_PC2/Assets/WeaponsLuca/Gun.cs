@@ -6,6 +6,7 @@ public class Gun: MonoBehaviour
     public float Proiettili;
     
     private PlayerLife Myscript;
+    private PlayerLifeWIP MyScript2;
 
     public GameObject bullet;
 
@@ -44,8 +45,8 @@ public class Gun: MonoBehaviour
     private void Start()
     {
         //playerRb = GameObject.Find("Player").GetComponent<Rigidbody>();
-        Myscript = GameObject.Find("Player").GetComponent<PlayerLife>();
-        Myscript.BulletTimer = Proiettili;
+        MyScript2 = GameObject.Find("Player").GetComponent<PlayerLifeWIP>();
+        MyScript2.BulletTimer = Proiettili;
         fpsCam = Camera.main;
         
     }
@@ -62,10 +63,9 @@ public class Gun: MonoBehaviour
         else shooting = Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Joystick1Button7);
      
         //Shooting
-        if (readyToShoot && shooting && Myscript.BulletTimer > 0)
+        if (readyToShoot && shooting && MyScript2.BulletTimer > 0)
         {         
-            Shoot();
-            
+            Shoot();          
         }
     }
 

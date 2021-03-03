@@ -16,13 +16,14 @@ public class AAAttacco : MonoBehaviour
     void Start()
     {
         target = GameObject.Find("Player").GetComponent<Transform>();
-        InvokeRepeating("Attack", 2, attackTime);
+        Attack();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+        
     }
 
     void Attack()
@@ -47,5 +48,8 @@ public class AAAttacco : MonoBehaviour
         currentBullet.transform.forward = directionWithSpread.normalized;
 
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
+
+
+        Invoke("Attack", attackTime);
     }
 }
