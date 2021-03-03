@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3806153183682453156}
   - component: {fileID: 8916507155624259329}
   - component: {fileID: 1522443400638909002}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4658600171660940020}
   - component: {fileID: 2937977496657421971}
   - component: {fileID: 7163397112599198227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 3865428160745731190}
   - component: {fileID: 2728942714957825477}
   - component: {fileID: 4780459093628813263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 3937547921044242781}
   - component: {fileID: 233227066250514470}
   - component: {fileID: 7114569892461712380}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7953861589798659846}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corridor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

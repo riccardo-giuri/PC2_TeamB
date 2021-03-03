@@ -3260,6 +3260,7 @@ GameObject:
   - component: {fileID: 70593516}
   - component: {fileID: 70593515}
   - component: {fileID: 70593514}
+  - component: {fileID: 70593522}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3311,7 +3312,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70593513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4396793059c81a4aafc3b0ffaa7a4dc, type: 3}
   m_Name: 
@@ -3418,6 +3419,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -90.00001, z: 0}
+--- !u!114 &70593522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70593513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53b12f56503a3bc4a88e379cb6fd42bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 70593517}
+  GroundSpeed: 20
+  AirSpeed: 20
+  GravityValue: 50
+  groundlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  isGrounded: 0
+  JumpHeight: 2
 --- !u!1001 &71732137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24596,6 +24618,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StartingRoom (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592650953507561732, guid: 1cd1b442f0a222e43be99cccb37d91d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7592650953507561732, guid: 1cd1b442f0a222e43be99cccb37d91d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cd1b442f0a222e43be99cccb37d91d2, type: 3}
@@ -59092,10 +59124,10 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 51
+    m_Bits: 307
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
