@@ -17,6 +17,10 @@ public class RangedWeapon : MonoBehaviour
     /// </summary>
     public int FireRateo;
     /// <summary>
+    /// Current Ammo Avaliable in the weapon
+    /// </summary>
+    public int CurrentAmmo;
+    /// <summary>
     /// Position where projectiles are spawned from ranged weapons
     /// </summary>
     public Transform GunBarrel;
@@ -40,10 +44,7 @@ public class RangedWeapon : MonoBehaviour
     /// <param name="RangeDistance"></param>
     /// <param name="percentageDmgReduction"></param>
     /// <returns></returns>
-    /// 
-
-
-    
+    ///   
     public float CalculateRangeDamageDrop(float HitDistance, float Damage, float RangeDistance, float percentageDmgReduction)
     {
         if(HitDistance > RangeDistance)
@@ -107,5 +108,13 @@ public class RangedWeapon : MonoBehaviour
         {
             TotalDamage = Mathf.RoundToInt(newTotalDamage);
         }
+    }
+    
+    /// <summary>
+    /// Setup Method Called at the start for setup the current ammo value
+    /// </summary>
+    public void SetupCurrentAmmo()
+    {
+        CurrentAmmo = weaponData.Ammo;
     }
 }

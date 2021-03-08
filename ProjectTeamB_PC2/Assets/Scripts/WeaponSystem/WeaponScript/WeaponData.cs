@@ -6,9 +6,9 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     /// <summary>
-    /// Charge value of a weapon
+    /// Ammo Amount value of a weapon
     /// </summary>
-    public float Charge;    
+    public int Ammo;    
     /// <summary>
     /// Damage value of a single projectile
     /// </summary>

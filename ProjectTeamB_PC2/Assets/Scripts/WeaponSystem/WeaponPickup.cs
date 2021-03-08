@@ -12,6 +12,7 @@ public class WeaponPickup : MonoBehaviour
     private void Start()
     {
         playerController = FindObjectOfType<PlayerController>();
+        UipickupText = playerController.UIPickup;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,9 +25,8 @@ public class WeaponPickup : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.transform.parent.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E)|| Input.GetKeyDown(KeyCode.Joystick1Button0))
-        {
-             
+        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E)|| Input.GetKeyDown(KeyCode.Joystick1Button0))
+        {             
             SwitchWeapon();
         }
     }
@@ -41,11 +41,17 @@ public class WeaponPickup : MonoBehaviour
 
     void SwitchWeapon()
     {
-        Destroy(playerController.CurrentWeapon);
-        GameObject CurrentNewWeapon = Instantiate(WeaponToSpawn, playerController.WeaponPointToSpawn);
-        playerController.CurrentWeapon = CurrentNewWeapon;
-        playerController.PlayerShooting.CurrentRagedWeapon = CurrentNewWeapon.GetComponent<RangedWeapon>();
+        //destroy current Weapon
+        Destroy(playerController.playerShooting.CurrentRagedWeapon);
+        //instatiate new weapon at weapon Slot position
+        GameObject CurrentNewWeapon = Instantiate(WeaponToSpawn, playerController.WeaponSlot);
+        //set current ranged weapon to the one you instatiated
+        playerController.playerShooting.CurrentRagedWeapon = CurrentNewWeapon.GetComponent<RangedWeapon>();
+        //setup new current ammo
+        playerController.playerShooting.CurrentRagedWeapon.SetupCurrentAmmo();
+        //deactive pickupUI
         playerController.UIPickup.gameObject.SetActive(false);
+        //destroy this gameobject
         Destroy(this.gameObject);
     }
 }
