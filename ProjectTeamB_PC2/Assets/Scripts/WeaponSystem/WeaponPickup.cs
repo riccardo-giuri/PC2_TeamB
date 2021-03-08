@@ -42,7 +42,7 @@ public class WeaponPickup : MonoBehaviour
     void SwitchWeapon()
     {
         //destroy current Weapon
-        Destroy(playerController.playerShooting.CurrentRagedWeapon);
+        Destroy(playerController.playerShooting.CurrentRagedWeapon.gameObject);
         //instatiate new weapon at weapon Slot position
         GameObject CurrentNewWeapon = Instantiate(WeaponToSpawn, playerController.WeaponSlot);
         //set current ranged weapon to the one you instatiated

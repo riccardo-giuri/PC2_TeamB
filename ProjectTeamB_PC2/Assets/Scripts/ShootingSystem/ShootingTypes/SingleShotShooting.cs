@@ -6,7 +6,7 @@ public class SingleShotShooting : Shooting
 {
     public override void ShootingAction(RangedWeapon currentWeapon)
     {
-        if(CanWeaponShoot == true && currentWeapon.weaponData.Ammo > 0)
+        if(CanWeaponShoot == true && currentWeapon.CurrentAmmo > 0)
         {
             Shoot(currentWeapon);
             currentWeapon.CurrentAmmo -= 1;

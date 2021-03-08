@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1e50433d5b43fe419d9acad47b33375, type: 3}
   m_Name: EnemyWeapon
   m_EditorClassIdentifier: 
-  Charge: 0
-  Damage: 20
+  Ammo: 0
+  Damage: 5
   FirstProjectileDamage: 0
   Weight: 0
   Range: 0
   RangeDmgReduction: 0
   RecoilKnockBack: 0
-  ShootingForce: 10
+  ShootingForce: 20

@@ -15,7 +15,7 @@ public class WeaponDrop : MonoBehaviour
 
     public void DropWeapon()
     {
-        Instantiate(RandomWeaponDrop(), CalculateWeaponPosition(), Quaternion.identity);
+        Instantiate(RandomWeaponDrop(), transform.position, Quaternion.identity);
     }
 
     public Vector3 CalculateWeaponPosition()

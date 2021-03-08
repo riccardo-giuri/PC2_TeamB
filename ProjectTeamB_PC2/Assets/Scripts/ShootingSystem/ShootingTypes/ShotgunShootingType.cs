@@ -15,10 +15,10 @@ public class ShotgunShootingType : Shooting
 
     public override void ShootingAction(RangedWeapon currentWeapon)
     {
-        if (CanWeaponShoot == true && currentWeapon.weaponData.Ammo > 0)
+        if (CanWeaponShoot == true && currentWeapon.CurrentAmmo > 0)
         {
             Shoot(currentWeapon);
-            currentWeapon.CurrentAmmo -= PalletShotNumber;
+            currentWeapon.CurrentAmmo -= 1;
             StartCoroutine(WaitShotCooldown(ShotCooldown));
         }
     }

@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
 
     //temporary UI Variable
     public Text AmmoText;
+    public GameObject AmmoSwitchText;
 
     // Start is called before the first frame update
     void Start()
@@ -38,5 +39,14 @@ public class PlayerShooting : MonoBehaviour
     public void UpdateAmmoUI()
     {
         AmmoText.text = CurrentRagedWeapon.CurrentAmmo.ToString("F0");
+
+        if(CurrentRagedWeapon.CurrentAmmo <= 0)
+        {
+            AmmoSwitchText.SetActive(true);
+        }
+        else
+        {
+            AmmoSwitchText.SetActive(false);
+        }
     }
 }
