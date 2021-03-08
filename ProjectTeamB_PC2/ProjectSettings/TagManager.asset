@@ -14,6 +14,7 @@ TagManager:
   - Cambio
   - Melee
   - Room
+  - Walls
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ public class BurstShootingType : Shooting
 
     public override void ShootingAction(RangedWeapon currentWeapon)
     {
-        if(CanWeaponShoot == true)
+        if(CanWeaponShoot == true && currentWeapon.CurrentAmmo > 0)
         {
             StartCoroutine(ShootBurst(ShotCooldown, currentWeapon));
             StartCoroutine(WaitShotCooldown(CooldownBetweenBursts));
@@ -57,6 +57,7 @@ public class BurstShootingType : Shooting
             for (int shots = 0; shots < SingleBurstShotNumber; shots++)
             {
                 Shoot(currentWeapon);
+                currentWeapon.CurrentAmmo -= 1;
                 yield return new WaitForSeconds(shotCooldown);
             }
         }

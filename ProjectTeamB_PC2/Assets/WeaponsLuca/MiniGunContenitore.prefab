@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 1062666445168922011}
   - component: {fileID: 8114603960560752605}
   - component: {fileID: 7942035697525685107}
-  - component: {fileID: 5480253997427288852}
   - component: {fileID: 7055716745831493585}
   m_Layer: 2
   m_Name: MiniGunContenitore
@@ -110,8 +109,9 @@ MonoBehaviour:
   weaponData: {fileID: 11400000, guid: deef55a340f0b8043afa4335ac2b56f6, type: 2}
   TotalDamage: 0
   FireRateo: 0
+  CurrentAmmo: 0
   GunBarrel: {fileID: 1743554234506478718}
-  WeaponBulletPrefab: {fileID: 8885254115874149486, guid: b5fd6f7b780c0be4aa0f22d8cb797424,
+  WeaponBulletPrefab: {fileID: 3424243815347623666, guid: a732663bd14f13f459017f75ad8e7330,
     type: 3}
   ShootingType: {fileID: 7942035697525685107}
 --- !u!114 &7942035697525685107
@@ -128,21 +128,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShotCooldown: 0.01
   IsAutomatic: 1
---- !u!114 &5480253997427288852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743554235552740792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deff65eecd2695f46822630a8dc1970c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caricatore: 50
-  colpiSparati: 1
-  tapTime: 0
 --- !u!114 &7055716745831493585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +135,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743554235552740792}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae16db5701d0aaa47aa69e32bb137fd7, type: 3}
   m_Name: 

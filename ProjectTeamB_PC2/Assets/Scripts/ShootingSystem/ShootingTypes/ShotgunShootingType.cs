@@ -15,9 +15,10 @@ public class ShotgunShootingType : Shooting
 
     public override void ShootingAction(RangedWeapon currentWeapon)
     {
-        if (CanWeaponShoot == true)
+        if (CanWeaponShoot == true && currentWeapon.CurrentAmmo > 0)
         {
             Shoot(currentWeapon);
+            currentWeapon.CurrentAmmo -= 1;
             StartCoroutine(WaitShotCooldown(ShotCooldown));
         }
     }

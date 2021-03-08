@@ -3270,6 +3270,7 @@ GameObject:
   - component: {fileID: 70593515}
   - component: {fileID: 70593514}
   - component: {fileID: 70593522}
+  - component: {fileID: 70593523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3297,7 +3298,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70593513}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12a56377e5639374e807d8ae4542d388, type: 3}
   m_Name: 
@@ -3321,19 +3322,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70593513}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d4396793059c81a4aafc3b0ffaa7a4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
-  gravity: 9.81
-  JumpSpeed: 7
+  playerShooting: {fileID: 0}
+  playerMovement: {fileID: 0}
+  playerLife: {fileID: 0}
   WeaponPointToSpawn: {fileID: 1134058188}
   CurrentWeapon: {fileID: 2094302552}
   UIPickup: {fileID: 1077820686}
   Melee: {fileID: 1915930885}
-  PlayerShooting: {fileID: 70593514}
 --- !u!143 &70593517
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3449,6 +3449,23 @@ MonoBehaviour:
     m_Bits: 256
   isGrounded: 0
   JumpHeight: 2
+--- !u!114 &70593523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70593513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ef0d5f9a233b3478126ae08de69516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCurrentHP: 0
+  PlayerStartingHP: 10
+  EnemyTimeGain: 0
+  LifeText: {fileID: 2087644065}
+  DeathPanel: {fileID: 2080775042}
 --- !u!1001 &71732137
 PrefabInstance:
   m_ObjectHideFlags: 0
