@@ -7,15 +7,22 @@ public class WeaponDrop : MonoBehaviour
     //public Rigidbody RB;
     public WeaponDatabase weaponDatabase;
     public LayerMask WeaponDropLayer;
+    private int WeapondropCounter;
 
     public void Start()
     {
         weaponDatabase = FindObjectOfType<WeaponDatabase>();
+        WeapondropCounter = 0;
     }
 
     public void DropWeapon()
     {
-        Instantiate(RandomWeaponDrop(), transform.position, Quaternion.identity);
+        if(WeapondropCounter == 0)
+        {
+            Instantiate(RandomWeaponDrop(), CalculateWeaponPosition(), Quaternion.identity);
+            WeapondropCounter++;
+        }
+        
     }
 
     public Vector3 CalculateWeaponPosition()

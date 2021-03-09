@@ -44,16 +44,13 @@ public class PauseMenu : MonoBehaviour
     public void BackToMenu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("Test Menu");
     }
 
     public void Reload()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void RealoadReleaseScene()
-    {
-        //SceneManager.LoadScene()
-    }
 }
