@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
+		Time.timeScale = 1f;
+
 		playerShooting = GetComponent<PlayerShooting>();
 		playerMovement = GetComponent<PlayerMovement>();
 		playerLife = GetComponent<PlayerLifeSystem>();
